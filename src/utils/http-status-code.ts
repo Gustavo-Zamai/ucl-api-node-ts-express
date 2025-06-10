@@ -7,10 +7,12 @@ export const ok = async (data: any): Promise<HttpStatusCode> => {
   };
 };
 
-export const created = async (data: any): Promise<HttpStatusCode> => {
+export const created = async (): Promise<HttpStatusCode> => {
   return {
     statusCode: 201,
-    body: data,
+    body: {
+      message: 'Created Successfully',
+    },
   };
 };
 
@@ -21,10 +23,10 @@ export const noContent = async (): Promise<HttpStatusCode> => {
   };
 };
 
-export const badRequest = async (message: any): Promise<HttpStatusCode> => {
+export const badRequest = async (): Promise<HttpStatusCode> => {
   return {
     statusCode: 400,
-    body: message,
+    body: null,
   };
 };
 

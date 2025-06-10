@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "Real Madrid",
+    "badge": "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
+    "foundation": "1902",
+    "city": "Madrid",
+    "league": "La Liga",
+    "fans": 90000000
+  },
+  {
+    "id": 2,
+    "name": "FC Barcelona",
+    "badge": "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg",
+    "foundation": "1899",
+    "city": "Barcelona",
+    "league": "La Liga",
+    "fans": 90000000
+  },
+  {
+    "id": 3,
+    "name": "Manchester United",
+    "badge": "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg",
+    "foundation": "1878",
+    "city": "Manchester",
+    "league": "Premier League",
+    "fans": 75000000
+  },
+  {
+    "id": 4,
+    "name": "Bayern Munich",
+    "badge": "https://upload.wikimedia.org/wikipedia/en/1/1f/FC_Bayern_München_logo_(2017).svg",
+    "foundation": "1900",
+    "city": "Munich",
+    "league": "Bundesliga",
+    "fans": 29000000
+  },
+  {
+    "id": 5,
+    "name": "Liverpool",
+    "badge": "https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg",
+    "foundation": "1892",
+    "city": "Liverpool",
+    "league": "Premier League",
+    "fans": 30000000
+  },
+  {
+    "id": 6,
+    "name": "Paris Saint-Germain",
+    "badge": "https://upload.wikimedia.org/wikipedia/en/a/a7/Paris_Saint-Germain_F.C..svg",
+    "foundation": "1970",
+    "city": "Paris",
+    "league": "Ligue 1",
+    "fans": 20000000
+  },
+  {
+    "id": 7,
+    "name": "Chelsea",
+    "badge": "https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg",
+    "foundation": "1905",
+    "city": "London",
+    "league": "Premier League",
+    "fans": 30000000
+  },
+  {
+    "id": 8,
+    "name": "Juventus",
+    "badge": "https://upload.wikimedia.org/wikipedia/en/3/35/Juventus_FC_2017_logo.svg",
+    "foundation": "1897",
+    "city": "Turin",
+    "league": "Serie A",
+    "fans": 25000000
+  },
+  {
+    "id": 9,
+    "name": "Atletico Madrid",
+    "badge": "https://upload.wikimedia.org/wikipedia/en/f/f4/Atletico_Madrid_2017_logo.svg",
+    "foundation": "1903",
+    "city": "Madrid",
+    "league": "La Liga",
+    "fans": 25000000
+  },
+  {
+    "id": 10,
+    "name": "Borussia Dortmund",
+    "badge": "https://upload.wikimedia.org/wikipedia/commons/6/67/Borussia_Dortmund_logo.svg",
+    "foundation": "1909",
+    "city": "Dortmund",
+    "league": "Bundesliga",
+    "fans": 25000000
+  },
+  {
+    "id": 11,
+    "name": "Inter Milan",
+    "badge": "https://upload.wikimedia.org/wikipedia/en/0/0b/Inter_Milan.svg",
+    "foundation": "1908",
+    "city": "Milan",
+    "league": "Serie A",
+    "fans": 20000000
+  },
+  {
+    "id": 12,
+    "name": "AC Milan",
+    "badge": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_of_AC_Milan.svg",
+    "foundation": "1899",
+    "city": "Milan",
+    "league": "Serie A",
+    "fans": 18000000
+  },
+  {
+    "id": 13,
+    "name": "Arsenal",
+    "badge": "https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg",
+    "foundation": "1886",
+    "city": "London",
+    "league": "Premier League",
+    "fans": 27000000
+  },
+  {
+    "id": 14,
+    "name": "Napoli",
+    "badge": "https://upload.wikimedia.org/wikipedia/commons/2/2d/SSC_Napoli.svg",
+    "foundation": "1926",
+    "city": "Naples",
+    "league": "Serie A",
+    "fans": 12000000
+  },
+  {
+    "id": 15,
+    "name": "RB Leipzig",
+    "badge": "https://upload.wikimedia.org/wikipedia/en/0/04/RB_Leipzig_2014_logo.svg",
+    "foundation": "2009",
+    "city": "Leipzig",
+    "league": "Bundesliga",
+    "fans": 5000000
+  },
+  {
+    "id": 16,
+    "name": "Benfica",
+    "badge": "https://upload.wikimedia.org/wikipedia/en/8/81/SL_Benfica_logo.svg",
+    "foundation": "1904",
+    "city": "Lisbon",
+    "league": "Primeira Liga",
+    "fans": 14000000
+  },
+  {
+    "id": 17,
+    "name": "Porto",
+    "badge": "https://upload.wikimedia.org/wikipedia/en/f/f1/FC_Porto.svg",
+    "foundation": "1893",
+    "city": "Porto",
+    "league": "Primeira Liga",
+    "fans": 10000000
+  },
+  {
+    "id": 18,
+    "name": "Sporting CP",
+    "badge": "https://upload.wikimedia.org/wikipedia/en/0/04/Sporting_Clube_de_Portugal_logo.svg",
+    "foundation": "1906",
+    "city": "Lisbon",
+    "league": "Primeira Liga",
+    "fans": 8000000
+  },
+  {
+    "id": 19,
+    "name": "Ajax",
+    "badge": "https://upload.wikimedia.org/wikipedia/en/7/79/Ajax_Amsterdam.svg",
+    "foundation": "1900",
+    "city": "Amsterdam",
+    "league": "Eredivisie",
+    "fans": 9000000
+  },
+  {
+    "id": 20,
+    "name": "Galatasaray",
+    "badge": "https://upload.wikimedia.org/wikipedia/en/f/f1/Galatasaray_S.K._logo.svg",
+    "foundation": "1905",
+    "city": "Istanbul",
+    "league": "Süper Lig",
+    "fans": 20000000
+  }
+]
