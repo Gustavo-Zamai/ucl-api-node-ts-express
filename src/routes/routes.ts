@@ -18,9 +18,10 @@ routes.post('/players', PlayerController.postPlayer);
 routes.delete('/players/:id', PlayerController.deletePlayer);
 
 routes.patch('/players/:id', PlayerController.updatePlayer);
+
 // clubs
 routes.get('/clubs', ClubController.getClubs);
-routes.get('/clubs/:id', ClubController.getClubById);
-routes.get('/clubs/name/:name', ClubController.getClubByName);
+//routes.get('/clubs/:id', ClubController.getClubById);
+//routes.get('/clubs/name/:name', ClubController.getClubByName);
 
 export default routes;
