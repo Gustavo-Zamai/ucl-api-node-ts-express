@@ -1,6 +1,6 @@
-import { z } from "zod";
+import { z } from 'zod';
 
-export const StatisticsModel  = z.object({
+export const StatisticsModel = z.object({
   Overall: z.number().min(0).max(99),
   Pace: z.number().min(0).max(99),
   Shooting: z.number().min(0).max(99),
