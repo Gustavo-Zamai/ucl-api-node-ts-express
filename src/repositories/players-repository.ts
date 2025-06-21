@@ -14,13 +14,26 @@ export const findPlayerById = async (id: string) => {
   });
 };
 
-export const findPlayerByName = async (
-  name: string,
-): Promise<PlayerModel[]> => {
+export const findPlayerByName = async (name: string): Promise<PlayerModel> => {
   const player = await prisma.player.findMany({
     where: {
       name: {
         contains: name, // busca parcial
+        mode: 'insensitive',
+      },
+    },
+  });
+
+  return player;
+};
+
+export const findPlayerByClub = async (
+  club: string,
+): Promise<PlayerModel[]> => {
+  const player = await prisma.player.findMany({
+    where: {
+      club: {
+        contains: club,
         mode: 'insensitive',
       },
     },

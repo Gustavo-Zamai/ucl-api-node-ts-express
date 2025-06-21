@@ -24,7 +24,7 @@ export const getClubByLeague = async (req: Request, res: Response) => {
   const league = req.params.league;
   const httpResponse = await service.getClubByLeagueService(league);
   res.status(httpResponse.statusCode).json(httpResponse.body);
-}
+};
 
 export const postClub = async (req: Request, res: Response) => {
   const bodyValue = req.body;
@@ -43,4 +43,4 @@ export const deleteClub = async (req: Request, res: Response) => {
   const httpResponse = await service.deleteClubService(id);
 
   res.status(httpResponse.statusCode).json(httpResponse.body);
-}
+};

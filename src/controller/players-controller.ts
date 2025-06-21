@@ -21,6 +21,12 @@ export const getPlayerByName = async (req: Request, res: Response) => {
   res.status(httpResponse.statusCode).json(httpResponse.body);
 };
 
+export const getPlayerByClub = async (req: Request, res: Response) => {
+  const club = req.params.club;
+  const httpResponse = await service.getPlayerByClubService(club);
+  res.status(httpResponse.statusCode).json(httpResponse.body);
+};
+
 export const postPlayer = async (req: Request, res: Response) => {
   const bodyValue = req.body;
   const httpResponse = await service.createPlayerService(bodyValue);

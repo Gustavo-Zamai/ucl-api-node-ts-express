@@ -25,18 +25,20 @@ export const findClubByName = async (name: string): Promise<ClubModel[]> => {
   return club;
 };
 
-export const findClubByLeague = async (league: string): Promise<ClubModel[]> => {
+export const findClubByLeague = async (
+  league: string,
+): Promise<ClubModel[]> => {
   const clubs = await prisma.club.findMany({
     where: {
       league: {
         equals: league.trim(),
         mode: 'insensitive',
-      }
-    }
+      },
+    },
   });
 
   return clubs;
-}
+};
 
 export const insertClub = async (
   data: Omit<ClubModel, 'id'>,
@@ -45,6 +47,6 @@ export const insertClub = async (
 };
 
 export const deleteById = async (id: string) => {
-  const club = await prisma.club.delete({ where: { id }});
+  const club = await prisma.club.delete({ where: { id } });
   return club;
-}
+};
