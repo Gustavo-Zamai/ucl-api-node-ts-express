@@ -8,7 +8,9 @@ This is a RESTful API for retrieving data about football clubs and players parti
 - TypeScript
 - Express
 - CORS
-- JSON (simulated database)
+- Prisma
+- ZOD
+- Postgres
 
 ## 📁 Project Structure
 ```bash
@@ -116,7 +118,7 @@ app.use(cors());
 ## 🔮 Future Improvements
 #### 🔐 Authentication and Authorization with JWT
 
-#### 🗄 Real Database Integration (PostgreSQL, MongoDB, or MySQL)
+#### 🗄 Real Database Integration (PostgreSQL, MongoDB, or MySQL) -- In Progress
 
 #### 🌍 Dynamic Filtering by nationality, league, or position
 
