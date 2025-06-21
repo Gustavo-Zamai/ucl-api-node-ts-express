@@ -8,7 +8,9 @@ This is a RESTful API for retrieving data about football clubs and players parti
 - TypeScript
 - Express
 - CORS
-- JSON (simulated database)
+- Prisma
+- ZOD
+- PostgreSQL
 
 ## 📁 Project Structure
 ```bash
@@ -106,17 +108,15 @@ npm run start:watch
 ## 🛡 CORS Middleware
 The project uses the cors middleware to allow cross-origin requests, which is essential for frontend integrations hosted on separate domains.
 
-ts
-Copiar
-Editar
+```ts
 import cors from 'cors';
 app.use(cors());
-
+```
 
 ## 🔮 Future Improvements
 #### 🔐 Authentication and Authorization with JWT
 
-#### 🗄 Real Database Integration (PostgreSQL, MongoDB, or MySQL)
+#### 🗄 Real Database Integration (PostgreSQL, MongoDB, or MySQL) -- In Progress
 
 #### 🌍 Dynamic Filtering by nationality, league, or position
 
@@ -140,13 +140,8 @@ app.use(cors());
 - This project is licensed under the MIT License.
 
 
-## 👤 Author
+## 🙋‍♂️ Author
+#### Gustavo Zamai
 
-**Gustavo Zamai**  
-Full Stack Developer | Football Lover ⚽
-
-- GitHub: [@Gustavo-Zamai](https://github.com/Gustavo-Zamai)  
-- LinkedIn: [Gustavo Simao Zamai](https://www.linkedin.com/in/gustavo-sim%C3%A3o-zamai-664a5521a/)  
-- Email: [gustavosimaozamai@gmail.com](gustavosimaozamai@gmail.com)
-
-If you enjoyed this project or found it helpful, feel free to give it a ⭐️ or share it!
+[LinkedIn](https://www.linkedin.com/in/gustavo-sim%C3%A3o-zamai-664a5521a/) • 
+[GitHub](https://github.com/Gustavo-Zamai)
