@@ -17,20 +17,18 @@ This is a RESTful API for retrieving data about football clubs and players parti
 ucl-api-node-ts-express/
 ├── src/
 │ ├── controllers/
-│   └── clubs-controller.ts
-│   └── players-controller.ts
-│ ├── data/
-│    └── clubs.json
+│     └── clubs-controller.ts
+│     └── players-controller.ts
 │ ├── models/
-    └── club-model.ts
-│   └── http-status-code.ts
-    └── player-model.ts
-│   └── statistics.ts
-  ├── repositories/
-    ├── clubs-repository.ts
-    ├── players-repository.ts
+│     └── club-model.ts
+│     └── http-status-code.ts
+│     └── player-model.ts
+│     └── statistics.ts
+│ ├── repositories/
+│     ├── clubs-repository.ts
+│     ├── players-repository.ts
 │ ├── routes/
-    └── routes.ts
+│     └── routes.ts
 │ ├── app.ts
 │ └── server.ts
 ├── package.json
@@ -61,12 +59,18 @@ npm run start:watch
 ### Clubs
 - `GET /clubs` — Returns all clubs
 
+- `GET /clubs/:id` — Returns a specific club by id
+
+- `GET /clubs/name/:name` — Returns a specific club by name, or part
+
+- `POST /clubs` — Adds a new club
+
 ### Players
 - `GET /players` — Returns all players
 
 - `GET /players/:id` — Returns a specific player by id
 
-- `GET /players/name/:name` — Returns a specific player by name
+- `GET /players/name/:name` — Returns a specific player by name, or part
 
 - `POST /players` — Adds a new player
 
@@ -77,13 +81,12 @@ npm run start:watch
 ## 📌 Club Object Example
 ```json
 {
-  "id": 1,
-  "name": "Real Madrid",
-  "badge": "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
-  "foundation": "1902",
-  "city": "Madrid",
-  "league": "La Liga",
-  "fans": 90000000
+    "id": "ca57a6ed-1ca4-429f-8519-2c189be2bba7",
+    "name": "Bayern Munich",
+    "badge": "https://upload.wikimedia.org/wikipedia/commons/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg",
+    "foundation": 1900,
+    "city": "Munich",
+    "league": "Bundesliga"
 }
 ```
 ## 📌 Player Object Example
@@ -116,7 +119,7 @@ app.use(cors());
 ## 🔮 Future Improvements
 #### 🔐 Authentication and Authorization with JWT
 
-#### 🗄 Real Database Integration (PostgreSQL, MongoDB, or MySQL) -- In Progress
+#### 🗄 Real Database Integration (PostgreSQL, MongoDB, or MySQL) ✅
 
 #### 🌍 Dynamic Filtering by nationality, league, or position
 
@@ -126,7 +129,7 @@ app.use(cors());
 
 #### 📱 Cloud Deployment (Render, Vercel, Railway, etc.)
 
-#### 🖼 Dynamic Image Uploads for players and clubs
+#### 🖼 Dynamic Image Uploads for players and clubs -- In Progress
 
 #### 🐳 Docker Support:
 
