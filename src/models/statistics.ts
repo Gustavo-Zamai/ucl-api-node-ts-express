@@ -10,3 +10,4 @@ export const StatisticsModel  = z.object({
   Physical: z.number().min(0).max(99),
 });
 
+export type StatisticsModel = z.infer<typeof StatisticsModel>;

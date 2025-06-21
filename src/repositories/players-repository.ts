@@ -3,49 +3,62 @@ import { PlayerModel } from '../models/player-model';
 
 const prisma = new PrismaClient();
 
-export const findAllPlayers = async (): Promise<PlayerModel[]> => {
+export const findAllPlayers = async () => {
   return await prisma.player.findMany();
 };
 
-/*export const findPlayerById = async (
-  id: number,
-): Promise<PlayerModel | undefined> => {
-  return prisma.player.findUnique((player) => player.id === id);
+export const findPlayerById = async (id: string) => {
+  return await prisma.player.findUnique({
+    where: { id },
+  });
 };
 
 export const findPlayerByName = async (
   name: string,
-): Promise<PlayerModel | undefined> => {
-  return database.find((player) => player.name === name);
-};*/
+): Promise<PlayerModel[]> => {
+  const player = await prisma.player.findMany({
+    where: {
+      name: {
+        contains: name, // busca parcial
+        mode: 'insensitive',
+      },
+    },
+  });
 
-
-export const insertPlayer = async (player: PlayerModel) => {
-  return await prisma.player.create({data});
+  return player;
 };
 
-/*export const deleteOnePlayer = async (id: number) => {
-  const index = database.findIndex((player) => player.id === id);
+export const insertPlayer = async (data: unknown) => {
+  const validatedData = PlayerModel.parse(data);
 
-  if (index !== -1) {
-    database.splice(index, 1);
-    return true;
-  }
+  const player = await prisma.player.create({
+    data: {
+      ...validatedData,
+      statistics: validatedData.statistics,
+    },
+  });
 
-  return false;
+  return player;
 };
 
-export const findAndModifyPlayer = async (
-  id: number,
+export const deleteById = async (id: string): Promise<void> => {
+  const player = await prisma.player.delete({ where: { id } });
+  return player;
+};
+
+export const findAndModifyStatsPlayer = async (
+  id: string,
   statistics: StatisticsModel,
 ): Promise<PlayerModel> => {
   // find player
-  const playerIndex = database.findIndex((player) => player.id === id);
+  try {
+    const player = await prisma.player.update({
+      where: { id },
+      data: { statistics }, // Prisma converte automaticamente para JSON
+    });
 
-  if (playerIndex !== -1) {
-    database[playerIndex].statistics = statistics;
+    return player;
+  } catch (error) {
+    return null; // Caso o ID não exista
   }
-
-  return database[playerIndex];
 };
-*/

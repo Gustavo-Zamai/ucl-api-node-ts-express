@@ -2,9 +2,8 @@ import { response } from 'express';
 import { PlayerModel } from '../../models/player-model';
 import * as PlayerRepository from '../../repositories/players-repository';
 import * as HttpStatusCode from '../../utils/http-status-code';
-import { StatisticsModel } from '../../models/statistics';
 
-/*export const getPlayerService = async () => {
+export const getPlayerService = async () => {
   const data = await PlayerRepository.findAllPlayers();
   let response = null;
 
@@ -17,7 +16,7 @@ import { StatisticsModel } from '../../models/statistics';
   return response;
 };
 
-export const getPlayerByIdService = async (id: number) => {
+export const getPlayerByIdService = async (id: string) => {
   const data = await PlayerRepository.findPlayerById(id);
   let response = null;
 
@@ -30,6 +29,7 @@ export const getPlayerByIdService = async (id: number) => {
   return response;
 };
 
+
 export const getPlayerByNameService = async (name: string) => {
   const data = await PlayerRepository.findPlayerByName(name);
   let response = null;
@@ -41,7 +41,7 @@ export const getPlayerByNameService = async (name: string) => {
   }
 
   return response;
-};*/
+};
 
 export const createPlayerService = async (player: PlayerModel) => {
   let response = null;
@@ -56,9 +56,10 @@ export const createPlayerService = async (player: PlayerModel) => {
   return response;
 };
 
-/*export const deletePlayerService = async (id: number) => {
+export const deletePlayerService = async (id: string) => {
   let response = null;
-  const isDeleted = await PlayerRepository.deleteOnePlayer(id);
+
+  const isDeleted = await PlayerRepository.deleteById(id);
 
   if (isDeleted) {
     response = await HttpStatusCode.ok({ message: 'Deleted' });
@@ -68,11 +69,12 @@ export const createPlayerService = async (player: PlayerModel) => {
   return response;
 };
 
-export const updatePlayerService = async (
-  id: number,
+
+export const updateStatsPlayerService = async (
+  id: string,
   statistics: StatisticsModel,
 ) => {
-  const data = await PlayerRepository.findAndModifyPlayer(id, statistics);
+  const data = await PlayerRepository.findAndModifyStatsPlayer(id, statistics);
   let response = null;
 
   if (Object.keys(data).length === 0) {
@@ -83,4 +85,3 @@ export const updatePlayerService = async (
 
   return response;
 };
-*/

@@ -8,3 +8,5 @@ export const PlayerModel = z.object({
   position: z.string().min(2), // Ex: "RW"
   statistics: StatisticsModel,
 });
+
+export type PlayerModel = z.infer<typeof PlayerModel>;
