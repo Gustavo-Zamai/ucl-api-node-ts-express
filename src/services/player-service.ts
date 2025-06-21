@@ -1,6 +1,7 @@
-import { PlayerModel } from '../../models/player-model';
-import * as PlayerRepository from '../../repositories/players-repository';
-import * as HttpStatusCode from '../../utils/http-status-code';
+import { PlayerModel } from '../models/player-model';
+import { StatisticsModel } from '../models/statistics';
+import * as PlayerRepository from '../repositories/players-repository';
+import * as HttpStatusCode from '../utils/http-status-code';
 
 export const getPlayerService = async () => {
   const data = await PlayerRepository.findAllPlayers();
@@ -55,16 +56,10 @@ export const createPlayerService = async (player: PlayerModel) => {
 };
 
 export const deletePlayerService = async (id: string) => {
-  let response = null;
-
-  const isDeleted = await PlayerRepository.deleteById(id);
-
-  if (isDeleted) {
-    response = await HttpStatusCode.ok({ message: 'Deleted' });
-  } else {
-    response = await HttpStatusCode.badRequest();
-  }
-  return response;
+  //let response = null;
+  await PlayerRepository.deleteById(id);
+  return await HttpStatusCode.ok({ message: 'Deleted' });
+  //return response;
 };
 
 export const updateStatsPlayerService = async (

@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import { PlayerModel } from '../models/player-model';
+import { StatisticsModel } from '../models/statistics';
 
 const prisma = new PrismaClient();
 
@@ -43,7 +44,7 @@ export const insertPlayer = async (data: unknown) => {
 
 export const deleteById = async (id: string): Promise<void> => {
   const player = await prisma.player.delete({ where: { id } });
-  return player;
+  player;
 };
 
 export const findAndModifyStatsPlayer = async (

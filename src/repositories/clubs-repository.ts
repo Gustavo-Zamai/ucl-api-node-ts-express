@@ -22,12 +22,29 @@ export const findClubByName = async (name: string): Promise<ClubModel[]> => {
       },
     },
   });
-
   return club;
 };
+
+export const findClubByLeague = async (league: string): Promise<ClubModel[]> => {
+  const clubs = await prisma.club.findMany({
+    where: {
+      league: {
+        equals: league.trim(),
+        mode: 'insensitive',
+      }
+    }
+  });
+
+  return clubs;
+}
 
 export const insertClub = async (
   data: Omit<ClubModel, 'id'>,
 ): Promise<ClubModel> => {
   return await prisma.club.create({ data });
 };
+
+export const deleteById = async (id: string) => {
+  const club = await prisma.club.delete({ where: { id }});
+  return club;
+}

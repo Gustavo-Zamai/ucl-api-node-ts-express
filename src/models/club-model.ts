@@ -8,7 +8,7 @@ export const ClubModel = z.object({
   city: z.string(),
   league: z.string(),
   // Optional: include players when needed
-  players: z.array(z.any()).optional(),
+  //players: z.array(z.any()).optional(),
 });
 
 export type ClubModel = z.infer<typeof ClubModel>;

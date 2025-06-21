@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import * as service from '../services/players/player-service';
+import * as service from '../services/player-service';
 import { badRequest } from '../utils/http-status-code';
 import { StatisticsModel } from '../models/statistics';
 
