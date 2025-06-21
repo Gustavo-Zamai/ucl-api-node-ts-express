@@ -40,7 +40,6 @@ export const deletePlayer = async (req: Request, res: Response) => {
   res.status(httpResponse.statusCode).json(httpResponse.body);
 };
 
-
 export const updateStatsPlayer = async (req: Request, res: Response) => {
   const id = req.params.id;
   const bodyValue: StatisticsModel = req.body;

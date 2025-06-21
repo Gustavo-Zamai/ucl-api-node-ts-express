@@ -1,4 +1,3 @@
-import { response } from 'express';
 import { PlayerModel } from '../../models/player-model';
 import * as PlayerRepository from '../../repositories/players-repository';
 import * as HttpStatusCode from '../../utils/http-status-code';
@@ -28,7 +27,6 @@ export const getPlayerByIdService = async (id: string) => {
 
   return response;
 };
-
 
 export const getPlayerByNameService = async (name: string) => {
   const data = await PlayerRepository.findPlayerByName(name);
@@ -68,7 +66,6 @@ export const deletePlayerService = async (id: string) => {
   }
   return response;
 };
-
 
 export const updateStatsPlayerService = async (
   id: string,
