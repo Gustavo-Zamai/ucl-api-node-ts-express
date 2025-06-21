@@ -1,25 +1,37 @@
+import { PrismaClient } from '@prisma/client';
 import { ClubModel } from '../models/club-model';
-import fs from 'fs/promises';
 
-export const findAllClubs = async (): Promise<ClubModel[]> => {
-  const data = await fs.readFile('./src/data/clubs.json', 'utf-8');
-  const clubs: ClubModel[] = JSON.parse(data);
-  return clubs;
+const prisma = new PrismaClient();
+
+export const findAllClubs = async () => {
+  return await prisma.club.findMany();
 };
 
-/*
-export const findClubById = async (
-  id: number,
-): Promise<ClubModel | undefined> => {
-  const data = await fs.readFile("./src/data/clubs.json", "utf-8");
-  
-  
-  return database.find((club) => club.id === id);
+export const findClubById = async (id: string) => {
+  return await prisma.club.findUnique({
+    where: { id }
+  });
 };
+
 
 export const findClubByName = async (
   name: string,
-): Promise<ClubModel | undefined> => {
-  return database.find((club) => club.name === name);
+): Promise<ClubModel[]> => {
+  const club = await prisma.club.findMany({
+    where: {
+      name: {
+        contains: name,
+        mode: 'insensitive',
+      },
+    },
+  });
+
+  return club;
 };
-*/
+
+
+export const insertClub = async (
+  data: Omit<ClubModel, 'id'>,
+): Promise<ClubModel> => {
+  return await prisma.club.create({ data });
+};
