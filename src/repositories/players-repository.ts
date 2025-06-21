@@ -23,7 +23,20 @@ export const findPlayerByName = async (name: string): Promise<PlayerModel> => {
       },
     },
   });
+  return player;
+};
 
+export const findPlayerByPosition = async (
+  position: string,
+): Promise<PlayerModel[]> => {
+  const player = await prisma.player.findMany({
+    where: {
+      position: {
+        contains: position,
+        mode: 'insensitive',
+      },
+    },
+  });
   return player;
 };
 

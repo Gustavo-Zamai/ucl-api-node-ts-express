@@ -12,7 +12,6 @@ export const getPlayerService = async () => {
   } else {
     response = await HttpStatusCode.noContent();
   }
-
   return response;
 };
 
@@ -25,7 +24,6 @@ export const getPlayerByIdService = async (id: string) => {
   } else {
     response = await HttpStatusCode.noContent();
   }
-
   return response;
 };
 
@@ -38,7 +36,6 @@ export const getPlayerByNameService = async (name: string) => {
   } else {
     response = await HttpStatusCode.noContent();
   }
-
   return response;
 };
 
@@ -46,12 +43,23 @@ export const getPlayerByClubService = async (club: string) => {
   const data = await PlayerRepository.findPlayerByClub(club);
   let response = null;
 
-  if (data) {
-    response = await HttpStatusCode.ok(data);
-  } else {
+  if (data.length === 0) {
     response = await HttpStatusCode.noContent();
+  } else {
+    response = await HttpStatusCode.ok(data);
   }
+  return response;
+};
 
+export const getPlayerByPositionService = async (position: string) => {
+  const data = await PlayerRepository.findPlayerByPosition(position);
+  let response = null;
+
+  if (data.length === 0) {
+    response = await HttpStatusCode.noContent();
+  } else {
+    response = await HttpStatusCode.ok(data);
+  }
   return response;
 };
 
