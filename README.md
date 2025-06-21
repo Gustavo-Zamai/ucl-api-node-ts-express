@@ -108,12 +108,10 @@ npm run start:watch
 ## 🛡 CORS Middleware
 The project uses the cors middleware to allow cross-origin requests, which is essential for frontend integrations hosted on separate domains.
 
-ts
-Copiar
-Editar
+```ts
 import cors from 'cors';
 app.use(cors());
-
+```
 
 ## 🔮 Future Improvements
 #### 🔐 Authentication and Authorization with JWT
