@@ -14,14 +14,27 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Club {
+  id         String   @id @default(uuid())
+  name       String
+  badge      String
+  foundation Int
+  city       String
+  league     String
+  players    Player[]
+
+  @@map("clubs")
+}
+
 model Player {
-  id          String     @id @default(uuid())
+  id          String  @id @default(uuid())
   name        String
   club        String
   nationality String
   position    String
   statistics  Json
+  Club        Club?   @relation(fields: [clubId], references: [id])
+  clubId      String?
 
   @@map("players")
 }
-
