@@ -9,8 +9,8 @@ function createApp() {
   app.use('/api', routes);
 
   const corsOptions = {
-    origin: "*",
-    methods: ["GET", "POST", "PATCH", "DELETE"]
+    origin: '*',
+    methods: ['GET', 'POST', 'PATCH', 'DELETE'],
   };
 
   app.use(cors(corsOptions));
