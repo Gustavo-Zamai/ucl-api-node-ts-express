@@ -10,7 +10,7 @@ This is a RESTful API for retrieving data about football clubs and players parti
 - CORS
 - Prisma
 - ZOD
-- Postgres
+- PostgreSQL
 
 ## 📁 Project Structure
 ```bash
@@ -142,13 +142,8 @@ app.use(cors());
 - This project is licensed under the MIT License.
 
 
-## 👤 Author
+## 🙋‍♂️ Author
+#### Gustavo Zamai
 
-**Gustavo Zamai**  
-Full Stack Developer | Football Lover ⚽
-
-- GitHub: [@Gustavo-Zamai](https://github.com/Gustavo-Zamai)  
-- LinkedIn: [Gustavo Simao Zamai](https://www.linkedin.com/in/gustavo-sim%C3%A3o-zamai-664a5521a/)  
-- Email: [gustavosimaozamai@gmail.com](gustavosimaozamai@gmail.com)
-
-If you enjoyed this project or found it helpful, feel free to give it a ⭐️ or share it!
+[LinkedIn](https://www.linkedin.com/in/gustavo-sim%C3%A3o-zamai-664a5521a/) • 
+[GitHub](https://github.com/Gustavo-Zamai)
