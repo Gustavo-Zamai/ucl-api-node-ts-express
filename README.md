@@ -63,7 +63,11 @@ npm run start:watch
 
 - `GET /clubs/name/:name` — Returns a specific club by name, or part
 
+- `GET /clubs/league/:league` — Returns the clubs linked to league
+
 - `POST /clubs` — Adds a new club
+
+- `DELETE /clubs/:id` — Deletes a club
 
 ### Players
 - `GET /players` — Returns all players
@@ -121,7 +125,7 @@ app.use(cors());
 
 #### 🗄 Real Database Integration (PostgreSQL, MongoDB, or MySQL) ✅
 
-#### 🌍 Dynamic Filtering by nationality, league, or position
+#### 🌍 Dynamic Filtering by nationality, league, or position -- In Progress
 
 #### 📊 Advanced Stats and Player Rankings
 
@@ -131,7 +135,7 @@ app.use(cors());
 
 #### 🖼 Dynamic Image Uploads for players and clubs -- In Progress
 
-#### 🐳 Docker Support:
+#### 🐳 Docker Support: -- In Progress
 
 - Create a Dockerfile for the backend.
 
