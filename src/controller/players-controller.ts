@@ -3,7 +3,7 @@ import * as service from '../services/players/player-service';
 import { badRequest } from '../utils/http-status-code';
 import { StatisticsModel } from '../models/statistics';
 
-export const getPlayer = async (req: Request, res: Response) => {
+/*export const getPlayer = async (req: Request, res: Response) => {
   const httpResponse = await service.getPlayerService();
 
   res.status(httpResponse.statusCode).json(httpResponse.body);
@@ -19,7 +19,7 @@ export const getPlayerByName = async (req: Request, res: Response) => {
   const name = req.params.name;
   const httpResponse = await service.getPlayerByNameService(name);
   res.status(httpResponse.statusCode).json(httpResponse.body);
-};
+};*/
 
 export const postPlayer = async (req: Request, res: Response) => {
   const bodyValue = req.body;
@@ -32,7 +32,7 @@ export const postPlayer = async (req: Request, res: Response) => {
   }
 };
 
-export const deletePlayer = async (req: Request, res: Response) => {
+/*export const deletePlayer = async (req: Request, res: Response) => {
   const id = parseInt(req.params.id);
 
   const httpResponse = await service.deletePlayerService(id);
@@ -46,3 +46,4 @@ export const updatePlayer = async (req: Request, res: Response) => {
   const httpResponse = await service.updatePlayerService(id, bodyValue);
   res.status(httpResponse.statusCode).json(httpResponse.body);
 };
+*/

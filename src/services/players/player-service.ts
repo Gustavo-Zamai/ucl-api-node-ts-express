@@ -4,7 +4,7 @@ import * as PlayerRepository from '../../repositories/players-repository';
 import * as HttpStatusCode from '../../utils/http-status-code';
 import { StatisticsModel } from '../../models/statistics';
 
-export const getPlayerService = async () => {
+/*export const getPlayerService = async () => {
   const data = await PlayerRepository.findAllPlayers();
   let response = null;
 
@@ -41,7 +41,7 @@ export const getPlayerByNameService = async (name: string) => {
   }
 
   return response;
-};
+};*/
 
 export const createPlayerService = async (player: PlayerModel) => {
   let response = null;
@@ -56,7 +56,7 @@ export const createPlayerService = async (player: PlayerModel) => {
   return response;
 };
 
-export const deletePlayerService = async (id: number) => {
+/*export const deletePlayerService = async (id: number) => {
   let response = null;
   const isDeleted = await PlayerRepository.deleteOnePlayer(id);
 
@@ -83,3 +83,4 @@ export const updatePlayerService = async (
 
   return response;
 };
+*/

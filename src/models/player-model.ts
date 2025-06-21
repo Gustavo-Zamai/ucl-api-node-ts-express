@@ -1,16 +1,10 @@
-export interface PlayerModel {
-  id: number;
-  name: string;
-  club: string;
-  nationality: string;
-  position: string;
-  statistics: {
-    Overall: number;
-    Pace: number;
-    Shooting: number;
-    Passing: number;
-    Dribbling: number;
-    Defending: number;
-    Physical: number;
-  };
-}
+import { z } from "zod";
+import { StatisticsModel } from "./statistics";
+
+export const PlayerModel = z.object({
+  name: z.string().min(3),
+  club: z.string().min(3),
+  nationality: z.string().length(3), // Ex: "BRA"
+  position: z.string().min(2), // Ex: "RW"
+  statistics: StatisticsModel,
+});
