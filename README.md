@@ -70,7 +70,7 @@ npm run start:watch
 
 - `POST /players` — Adds a new player
 
-- `PUT /players/:id` — Updates a player
+- `PATCH /players/:id` — Updates stats of an player
 
 - `DELETE /players/:id` — Deletes a player
 
@@ -89,20 +89,20 @@ npm run start:watch
 ## 📌 Player Object Example
 ```json
 {
-  "id": 1,
-  "name": "Cristiano Ronaldo",
-  "club": "Manchester United",
-  "nationality": "Portugal",
-  "position": "Forward",
-  "statistics": {
-    "Overall": 94,
-    "Pace": 87,
-    "Shooting": 94,
-    "Passing": 88,
-    "Dribbling": 85,
-    "Defending": 38,
-    "Physical": 80
-  }
+    "id": "1ef0962d-951c-4e8a-9d03-f99981eec7f3",
+    "name": "Erling Haaland",
+    "club": "Manchester City",
+    "nationality": "NOR",
+    "position": "ST",
+    "statistics": {
+        "Pace": 89,
+        "Overall": 91,
+        "Passing": 65,
+        "Physical": 88,
+        "Shooting": 94,
+        "Defending": 45,
+        "Dribbling": 80
+    }
 }
 ```
 ## 🛡 CORS Middleware
