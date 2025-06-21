@@ -9,14 +9,11 @@ export const findAllClubs = async () => {
 
 export const findClubById = async (id: string) => {
   return await prisma.club.findUnique({
-    where: { id }
+    where: { id },
   });
 };
 
-
-export const findClubByName = async (
-  name: string,
-): Promise<ClubModel[]> => {
+export const findClubByName = async (name: string): Promise<ClubModel[]> => {
   const club = await prisma.club.findMany({
     where: {
       name: {
@@ -28,7 +25,6 @@ export const findClubByName = async (
 
   return club;
 };
-
 
 export const insertClub = async (
   data: Omit<ClubModel, 'id'>,
