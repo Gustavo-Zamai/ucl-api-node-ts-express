@@ -63,6 +63,18 @@ export const getPlayerByPositionService = async (position: string) => {
   return response;
 };
 
+export const getPlayerByNationalityService = async (nationality: string) => {
+  const data = await PlayerRepository.findPlayerByNationality(nationality);
+  let response = null;
+
+  if (data.length === 0) {
+    response = await HttpStatusCode.noContent();
+  } else {
+    response = await HttpStatusCode.ok(data);
+  }
+  return response;
+}
+
 export const createPlayerService = async (player: PlayerModel) => {
   let response = null;
 

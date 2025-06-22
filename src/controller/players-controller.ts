@@ -31,6 +31,12 @@ export const getPlayerByPosition = async (req: Request, res: Response) => {
   const position = req.params.position;
   const httpResponse = await service.getPlayerByPositionService(position);
   res.status(httpResponse.statusCode).json(httpResponse.body);
+};
+
+export const getPlayerByNationality = async (req:Request, res: Response) => {
+  const nationality = req.params.nationality;
+  const httpResponse = await service.getPlayerByNationalityService(nationality);
+  res.status(httpResponse.statusCode).json(httpResponse.body);  
 }
 
 export const postPlayer = async (req: Request, res: Response) => {

@@ -40,6 +40,20 @@ export const findPlayerByPosition = async (
   return player;
 };
 
+export const findPlayerByNationality = async (
+  nationality: string,
+): Promise<PlayerModel[]> => {
+  const player = await prisma.player.findMany({
+    where: {
+      nationality: {
+        contains: nationality,
+        mode: 'insensitive',
+      },
+    },
+  });
+  return player;
+};
+
 export const findPlayerByClub = async (
   club: string,
 ): Promise<PlayerModel[]> => {
