@@ -1,6 +1,6 @@
 # 🏆🏅 UCL API - Node.js + TypeScript + Express
 
-This is a RESTful API for retrieving data about football clubs and players participating in the UEFA Champions League. It was built using Node.js, TypeScript, and Express, and includes endpoints to access information such as club name, city, number of fans, badge (logo), players, stats, and more.
+This is a RESTful API for retrieving data about football clubs and players participating in the UEFA Champions League. It was built using Node.js, TypeScript, and Express, and includes endpoints to access information such as club name, city, badge (logo), players, stats, and more.
 
 ## 🛠 Technologies Used
 
@@ -76,6 +76,12 @@ npm run start:watch
 
 - `GET /players/name/:name` — Returns a specific player by name, or part
 
+- `GET /players/clubs/:club` — Returns players by their club
+
+- `GET /players/position/:position` — Returns players by their position
+
+- `GET /players/nationality/:nationality` — Returns players by their nationality
+
 - `POST /players` — Adds a new player
 
 - `PATCH /players/:id` — Updates stats of an player
@@ -125,7 +131,7 @@ app.use(cors());
 
 #### 🗄 Real Database Integration (PostgreSQL, MongoDB, or MySQL) ✅
 
-#### 🌍 Dynamic Filtering by nationality, league, or position -- In Progress
+#### 🌍 Dynamic Filtering by nationality, league, or position ✅
 
 #### 📊 Advanced Stats and Player Rankings
 

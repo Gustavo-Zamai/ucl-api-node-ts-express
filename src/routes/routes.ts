@@ -10,7 +10,10 @@ routes.get('/players/:id', PlayerController.getPlayerById);
 routes.get('/players/name/:name', PlayerController.getPlayerByName);
 routes.get('/players/clubs/:club', PlayerController.getPlayerByClub);
 routes.get('/players/position/:position', PlayerController.getPlayerByPosition);
-routes.get('/players/nationality/:nationality', PlayerController.getPlayerByNationality);
+routes.get(
+  '/players/nationality/:nationality',
+  PlayerController.getPlayerByNationality,
+);
 
 routes.post('/players', PlayerController.postPlayer);
 routes.delete('/players/:id', PlayerController.deletePlayer);

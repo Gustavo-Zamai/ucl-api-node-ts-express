@@ -73,7 +73,7 @@ export const getPlayerByNationalityService = async (nationality: string) => {
     response = await HttpStatusCode.ok(data);
   }
   return response;
-}
+};
 
 export const createPlayerService = async (player: PlayerModel) => {
   let response = null;
